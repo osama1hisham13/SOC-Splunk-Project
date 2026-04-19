@@ -1,0 +1,17 @@
+index=project
+| eval src_ip=coalesce(src_ip, Source_Network_Address)
+| eval user=coalesce(Account_Name, user)
+| eval all_data=src_ip . "_" . user
+
+| eval action=case(
+    like(_raw,"%Failed password%") OR EventCode=4625, "failed",
+    like(_raw,"%Accepted password%") OR EventCode=4624, "success"
+)
+
+| stats 
+    count(eval(action="failed")) as failed_count,
+    count(eval(action="success")) as success_count
+    by all_data, src_ip, user
+
+| where failed_count > 5 AND success_count > 0
+| sort -failed_count

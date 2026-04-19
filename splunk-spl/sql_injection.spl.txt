@@ -1,0 +1,7 @@
+index=project sourcetype=apache_access
+| where like(_raw,"%OR 1=1%") 
+    OR like(_raw,"%UNION%") 
+    OR like(_raw,"%sqlmap%")
+| rex "^(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| stats count by src_ip
+| sort -count

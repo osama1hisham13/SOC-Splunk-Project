@@ -1,0 +1,10 @@
+index=project
+| eval user=coalesce(Account_Name, user)
+| eval src_ip=coalesce(src_ip, Source_Network_Address)
+| eval action=case(
+    like(_raw,"%Failed password%") OR EventCode=4625, "failed"
+)
+| where action="failed"
+| stats count as failed_attempts by src_ip, user
+| where failed_attempts > 5
+| sort -failed_attempts

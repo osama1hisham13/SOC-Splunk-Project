@@ -1,0 +1,6 @@
+index=project sourcetype=apache_access
+| rex "^(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| rex "HTTP\/\d\.\d\"\s+(?<status>\d+)\s+(?<bytes>\d+)"
+| stats sum(bytes) as total_bytes by src_ip
+| where total_bytes > 2000
+| sort -total_bytes

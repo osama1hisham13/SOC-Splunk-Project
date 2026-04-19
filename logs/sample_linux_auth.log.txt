@@ -1,0 +1,17 @@
+Apr 17 10:00:01 kali sshd[1234]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:02 kali sshd[1235]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:03 kali sshd[1236]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:04 kali sshd[1237]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:05 kali sshd[1238]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:06 kali sshd[1239]: Failed password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:00:07 kali sshd[1240]: Accepted password for root from 192.168.1.10 port 22 ssh2
+Apr 17 10:02:01 kali sshd[1241]: Failed password for admin from 10.0.0.5 port 22 ssh2
+Apr 17 10:02:02 kali sshd[1242]: Failed password for admin from 10.0.0.5 port 22 ssh2
+Apr 17 10:02:03 kali sshd[1243]: Failed password for admin from 10.0.0.5 port 22 ssh2
+Apr 17 10:02:04 kali sshd[1244]: Failed password for admin from 10.0.0.5 port 22 ssh2
+Apr 17 10:02:05 kali sshd[1245]: Failed password for admin from 10.0.0.5 port 22 ssh2
+Apr 17 10:05:01 kali sshd[1250]: Accepted password for user1 from 172.16.0.8 port 22 ssh2
+Apr 17 10:05:02 kali sshd[1251]: Accepted password for user2 from 172.16.0.9 port 22 ssh2
+Apr 17 10:05:03 kali sshd[1252]: Failed password for guest from 172.16.0.9 port 22 ssh2
+Apr 17 10:05:04 kali sshd[1253]: Failed password for guest from 172.16.0.9 port 22 ssh2
+Apr 17 10:05:05 kali sshd[1254]: Failed password for guest from 172.16.0.9 port 22 ssh2

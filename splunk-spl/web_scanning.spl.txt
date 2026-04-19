@@ -1,0 +1,5 @@
+index=project sourcetype=apache_access
+| rex "^(?<src_ip>\d+\.\d+\.\d+\.\d+)"
+| stats dc(url) as unique_urls by src_ip
+| where unique_urls > 10
+| sort -unique_urls
